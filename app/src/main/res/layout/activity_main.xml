@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.inno.ilyadmt.youknownothingjs.Activities.MainActivity"
+    >
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guid_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
+
+    <fragment
+        android:id="@+id/fr_charlist"
+        android:name="com.inno.ilyadmt.youknownothingjs.Fragments.CharListFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guid_main"
+        tools:layout= "@layout/fragment_charlist"
+        tools:layout_editor_absoluteX="8dp"></fragment>
+    <Button
+        android:id="@+id/btn_next_pg"
+        android:text="Load Next Page"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/btn_prev_pg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guid_main"
+        android:onClick="nextPage"
+        />
+    <Button
+        android:id="@+id/btn_prev_pg"
+        android:text="Load Prev Page"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@id/btn_next_pg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guid_main"
+        android:onClick="prevPage"/>
+
+</android.support.constraint.ConstraintLayout>
